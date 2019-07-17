@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Post(models.Model):
 	#各プロパティにmodels関数が用意している型を定義する（型で初期化ってことかな）
-	autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=200)
 	text = models.TextField()
 	created_date = models.DateTimeField(
